@@ -1,65 +1,96 @@
-package excel.dto;
+package excelandtxtTosql.excel.dto;
 
-public class DVideo {
-    private Integer courseId;
-    private Integer catalogId1;
-    private Integer catalogId2;
+import com.alibaba.excel.annotation.ExcelProperty;
+
+public class JiChuDto {
+    @ExcelProperty("courseId")
+    private String courseId;
+    @ExcelProperty("catalogId1")
+    private String catalogId1;
+    @ExcelProperty("catalogId2")
+    private String catalogId2;
+    @ExcelProperty("title")
     private String title;
+    @ExcelProperty("guid")
     private String guid;
-    private String videoid;
-    private String pageurl;
-    private String knowledgeTop;
-    private String knowledgeSub;
+    @ExcelProperty("url")
+    private String url;
+    @ExcelProperty("wkeyword")
     private String wkeyword;
+    @ExcelProperty("wpublicpeople")
     private String wpublicpeople;
+    @ExcelProperty("wtime")
     private String wtime;
+    @ExcelProperty("wlocation")
     private String wlocation;
+    @ExcelProperty("wfigure")
     private String wfigure;
+    @ExcelProperty("worgan")
     private String worgan;
+    @ExcelProperty("wentityrelation")
     private String wentityrelation;
+    @ExcelProperty("wscene")
     private String wscene;
+    @ExcelProperty("wpoetry")
     private String wpoetry;
+    @ExcelProperty("videoid")
+    private String videoid;
+    @ExcelProperty("length")
     private String length;
+    @ExcelProperty("bitrate")
     private String bitrate;
+    @ExcelProperty("subtitle")
     private String subtitle;
+    @ExcelProperty("brief")
     private String brief;
+    @ExcelProperty("editor")
     private String editor;
+    @ExcelProperty("photoa")
     private String photoa;
+    @ExcelProperty("photob")
     private String photob;
+    @ExcelProperty("photoc")
     private String photoc;
+    @ExcelProperty("keyword")
     private String keyword;
+    @ExcelProperty("provider")
     private String provider;
+    @ExcelProperty("channel")
     private String channel;
+    @ExcelProperty("program")
     private String program;
+    @ExcelProperty("origintype")
     private String origintype;
+    @ExcelProperty("originmedia")
     private String originmedia;
+    @ExcelProperty("cataloga")
     private String cataloga;
+    @ExcelProperty("catalogb")
     private String catalogb;
-    private Integer isdelete;
+    @ExcelProperty("pubtime")
     private String pubtime;
-    private String updatetime;
 
-    public Integer getCourseId() {
+    public String getCourseId() {
         return courseId;
     }
 
-    public void setCourseId(Integer courseId) {
+    public void setCourseId(String courseId) {
         this.courseId = courseId;
     }
 
-    public Integer getCatalogId1() {
+    public String getCatalogId1() {
         return catalogId1;
     }
 
-    public void setCatalogId1(Integer catalogId1) {
+    public void setCatalogId1(String catalogId1) {
         this.catalogId1 = catalogId1;
     }
 
-    public Integer getCatalogId2() {
+    public String getCatalogId2() {
         return catalogId2;
     }
 
-    public void setCatalogId2(Integer catalogId2) {
+    public void setCatalogId2(String catalogId2) {
         this.catalogId2 = catalogId2;
     }
 
@@ -71,6 +102,14 @@ public class DVideo {
         this.title = title;
     }
 
+    public String getWpoetry() {
+        return wpoetry;
+    }
+
+    public void setWpoetry(String wpoetry) {
+        this.wpoetry = wpoetry;
+    }
+
     public String getGuid() {
         return guid;
     }
@@ -79,36 +118,12 @@ public class DVideo {
         this.guid = guid;
     }
 
-    public String getVideoid() {
-        return videoid;
+    public String getUrl() {
+        return url;
     }
 
-    public void setVideoid(String videoid) {
-        this.videoid = videoid;
-    }
-
-    public String getPageurl() {
-        return pageurl;
-    }
-
-    public void setPageurl(String pageurl) {
-        this.pageurl = pageurl;
-    }
-
-    public String getKnowledgeTop() {
-        return knowledgeTop;
-    }
-
-    public void setKnowledgeTop(String knowledgeTop) {
-        this.knowledgeTop = knowledgeTop;
-    }
-
-    public String getKnowledgeSub() {
-        return knowledgeSub;
-    }
-
-    public void setKnowledgeSub(String knowledgeSub) {
-        this.knowledgeSub = knowledgeSub;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getWkeyword() {
@@ -175,12 +190,12 @@ public class DVideo {
         this.wscene = wscene;
     }
 
-    public String getWpoetry() {
-        return wpoetry;
+    public String getVideoid() {
+        return videoid;
     }
 
-    public void setWpoetry(String wpoetry) {
-        this.wpoetry = wpoetry;
+    public void setVideoid(String videoid) {
+        this.videoid = videoid;
     }
 
     public String getLength() {
@@ -311,14 +326,6 @@ public class DVideo {
         this.catalogb = catalogb;
     }
 
-    public Integer getIsdelete() {
-        return isdelete;
-    }
-
-    public void setIsdelete(Integer isdelete) {
-        this.isdelete = isdelete;
-    }
-
     public String getPubtime() {
         return pubtime;
     }
@@ -327,26 +334,15 @@ public class DVideo {
         this.pubtime = pubtime;
     }
 
-    public String getUpdatetime() {
-        return updatetime;
-    }
-
-    public void setUpdatetime(String updatetime) {
-        this.updatetime = updatetime;
-    }
-
     @Override
     public String toString() {
-        return "DVideo{" +
-                "courseId=" + courseId +
-                ", catalogId1=" + catalogId1 +
-                ", catalogId2=" + catalogId2 +
+        return "ExcelDto{" +
+                "courseId='" + courseId + '\'' +
+                ", catalogId1='" + catalogId1 + '\'' +
+                ", catalogId2='" + catalogId2 + '\'' +
                 ", title='" + title + '\'' +
                 ", guid='" + guid + '\'' +
-                ", videoid='" + videoid + '\'' +
-                ", pageurl='" + pageurl + '\'' +
-                ", knowledgeTop='" + knowledgeTop + '\'' +
-                ", knowledgeSub='" + knowledgeSub + '\'' +
+                ", url='" + url + '\'' +
                 ", wkeyword='" + wkeyword + '\'' +
                 ", wpublicpeople='" + wpublicpeople + '\'' +
                 ", wtime='" + wtime + '\'' +
@@ -355,7 +351,7 @@ public class DVideo {
                 ", worgan='" + worgan + '\'' +
                 ", wentityrelation='" + wentityrelation + '\'' +
                 ", wscene='" + wscene + '\'' +
-                ", wpoetry='" + wpoetry + '\'' +
+                ", videoid='" + videoid + '\'' +
                 ", length='" + length + '\'' +
                 ", bitrate='" + bitrate + '\'' +
                 ", subtitle='" + subtitle + '\'' +
@@ -372,9 +368,8 @@ public class DVideo {
                 ", originmedia='" + originmedia + '\'' +
                 ", cataloga='" + cataloga + '\'' +
                 ", catalogb='" + catalogb + '\'' +
-                ", isdelete=" + isdelete +
                 ", pubtime='" + pubtime + '\'' +
-                ", updatetime='" + updatetime + '\'' +
                 '}';
     }
+
 }

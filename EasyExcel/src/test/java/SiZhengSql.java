@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import txt.SiZheng;
+import excelandtxtTosql.txt.SiZheng;
 
 import java.io.*;
 import java.sql.*;

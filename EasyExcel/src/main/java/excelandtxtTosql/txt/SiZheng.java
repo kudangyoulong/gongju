@@ -1,4 +1,4 @@
-package txt;
+package excelandtxtTosql.txt;
 
 public class SiZheng {
     private Integer vdbid;
